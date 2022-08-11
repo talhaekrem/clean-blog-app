@@ -1,0 +1,35 @@
+{
+  "name": "clean-blog-app",
+  "version": "1.0.0",
+  "description": "Nodejs Clean Blog App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talhaekrem/clean-blog-app.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Router",
+    "MVC",
+    "CRUD",
+    "MongoDB",
+    "Mongoose",
+    "Blog"
+  ],
+  "author": "Talha Ekrem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talhaekrem/clean-blog-app/issues"
+  },
+  "homepage": "https://github.com/talhaekrem/clean-blog-app#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
