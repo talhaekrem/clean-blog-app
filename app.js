@@ -21,6 +21,7 @@ app.use(express.json());
 app.get("/", async (req, res) => {
   const blogsData = await Blog.find().exec();
   let blogs = blogsData.map((e) => ({
+    _id: e._id,
     title: e.title,
     detail: e.detail,
     dateCreated: formatDate(e.dateCreated),
@@ -42,5 +43,16 @@ app.post("/add-blog", async (req, res) => {
     detail: detail,
   });
   res.redirect("/");
+});
+app.get("/posts/:id", async (req, res) => {
+  let id = req.params.id;
+  const blogData = await Blog.findById(id).exec();
+  let formatted = {
+    _id: blogData._id,
+    title: blogData.title,
+    detail: blogData.detail,
+    dateCreated: formatDate(blogData.dateCreated),
+  }
+  res.render("post", { blog: formatted });
 });
 app.listen(port, () => console.log(`Port:${port}. Server is up...`));
