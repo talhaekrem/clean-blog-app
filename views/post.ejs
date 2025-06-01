@@ -17,7 +17,15 @@
       </div>
     </div>
   </header>
-
+  <div class="container d-flex align-items-center justify-content-end">
+    <!-- Share box -->
+    <div>
+      <!-- align-right d-inline-block r-0 -->
+        <a href="/blogs/edit/<%= blog._id %>" class="btn btn-primary p-1"><span>Update Details</span></a>	
+        <a onclick="return confirm('Blog silinecektir. Emin misiniz?')"
+        href="/blogs/<%=blog._id %>?_method=DELETE" class="btn btn-danger p-1"><span>Delete Blog</span></a>	
+    </div>
+  </div>
   <!-- Post Content -->
   <article>
     <div class="container">
